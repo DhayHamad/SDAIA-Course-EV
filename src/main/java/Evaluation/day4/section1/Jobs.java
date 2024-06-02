@@ -1,4 +1,4 @@
-package Evaluation.day4;
+package Evaluation.day4.section1;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

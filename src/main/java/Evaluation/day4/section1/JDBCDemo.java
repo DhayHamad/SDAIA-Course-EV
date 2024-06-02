@@ -1,4 +1,4 @@
-package Evaluation.day4;
+package Evaluation.day4.section1;
 
 import java.sql.*;
 
@@ -14,11 +14,12 @@ public class JDBCDemo {
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()){
-                Jobs j = new Jobs(rs);
-                System.out.println(j);
+                Jobs d = new Jobs(rs);
+                System.out.println(d);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 }
+
