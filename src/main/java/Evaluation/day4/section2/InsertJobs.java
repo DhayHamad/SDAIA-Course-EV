@@ -6,9 +6,11 @@ import java.sql.SQLException;
 public class InsertJobs {
     private int jobID;
     private String jobnTitle;
-    private int minSalary;
-    private int mxnSalary;
+    private double minSalary;
+    private double mxnSalary;
 
+    public InsertJobs() {
+    }
 
     public InsertJobs(ResultSet rs) throws SQLException {
         jobID = rs.getInt("job_Id");
@@ -18,11 +20,11 @@ public class InsertJobs {
 
     }
 
-    public InsertJobs(int jobID, String jobnTitle, int minSalary, int mxnSalary) {
+    public InsertJobs(int jobID, String jobnTitle, double minSalary, double mxnSalary) {
         this.jobID = jobID;
         this.jobnTitle = jobnTitle;
         this.minSalary = minSalary;
-        this.mxnSalary = minSalary;
+        this.mxnSalary = mxnSalary;
     }
 
     public int getJobID() {
@@ -41,19 +43,19 @@ public class InsertJobs {
         this.jobnTitle = jobnTitle;
     }
 
-    public int getMinSalary() {
+    public double getMinSalary() {
         return minSalary;
     }
 
-    public void setMinSalary(int minSalary) {
+    public void setMinSalary(double minSalary) {
         this.minSalary = minSalary;
     }
 
-    public int getMxnSalary() {
+    public double getMxnSalary() {
         return mxnSalary;
     }
 
-    public void setMxnSalary(int mxnSalary) {
+    public void setMxnSalary(double mxnSalary) {
         this.mxnSalary = mxnSalary;
     }
 

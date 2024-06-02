@@ -7,6 +7,7 @@ public class Jobs {
     private int jobID;
     private String jobnTitle;
     private int minSalary;
+    private double mxnSalary;
 
     public Jobs(ResultSet rs) throws SQLException {
         jobID = rs.getInt("job_Id");
@@ -36,7 +37,11 @@ public class Jobs {
         this.jobnTitle = jobnTitle;
     }
 
-    public int getMinSalary() {
+    public double getMxnSalary() {
+        return mxnSalary;
+    }
+
+    public double getMinSalary() {
         return minSalary;
     }
 
@@ -52,4 +57,5 @@ public class Jobs {
                 ", minSalary=" + minSalary +
                 '}';
     }
+
 }
